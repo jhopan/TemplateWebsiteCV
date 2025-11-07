@@ -12,11 +12,12 @@
   6. About Section
   7. Skills Section
   8. Portfolio Section
-  9. Experience Section
-  10. Contact Section
-  11. Footer
-  12. Scroll to Top Button
-  13. Responsive Design
+  9. Education Section
+  10. Experience Section
+  11. Contact Section
+  12. Footer
+  13. Scroll to Top Button
+  14. Responsive Design
   
   📝 CARA KUSTOMISASI:
   - Cari section yang ingin diubah
@@ -888,7 +889,127 @@ section {
 }
 
 /* ===================================
-   9. EXPERIENCE SECTION
+   9. EDUCATION SECTION
+   =================================== 
+   
+   PENJELASAN:
+   - Section untuk menampilkan riwayat pendidikan
+   - Card layout dengan icon dan informasi lengkap
+   - Responsive dan modern design
+   
+   INSTRUKSI KUSTOMISASI:
+   - Ubah warna icon dan card
+   - Adjust spacing antar cards
+   - Ganti ukuran font
+   - Sesuaikan shadow dan border radius
+*/
+
+/* Container untuk education content */
+.education-content {
+  display: grid; /* PENJELASAN: Grid layout */
+  grid-template-columns: 1fr; /* INSTRUKSI: 1 kolom untuk mobile-first */
+  gap: 30px; /* INSTRUKSI: Jarak antar card */
+  max-width: 900px; /* INSTRUKSI: Lebar maksimal */
+  margin: 0 auto; /* EFEK: Center alignment */
+}
+
+/* Card untuk setiap pendidikan */
+.education-card {
+  display: flex; /* PENJELASAN: Flexbox untuk layout */
+  align-items: flex-start; /* EFEK: Align ke atas */
+  gap: 25px; /* INSTRUKSI: Jarak antara icon dan info */
+  background: white; /* INSTRUKSI: Background putih */
+  padding: 30px; /* INSTRUKSI: Padding dalam card */
+  border-radius: 15px; /* INSTRUKSI: Sudut melengkung */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* EFEK: Shadow halus */
+  transition: all 0.3s ease; /* EFEK: Smooth transition */
+  border-left: 4px solid var(--primary-color); /* INSTRUKSI: Border kiri aksen */
+}
+
+/* Hover effect untuk card */
+.education-card:hover {
+  transform: translateY(-5px); /* EFEK: Naik sedikit */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* EFEK: Shadow lebih dalam */
+}
+
+/* Icon container */
+.education-icon {
+  flex-shrink: 0; /* PENJELASAN: Icon tidak mengecil */
+  width: 60px; /* INSTRUKSI: Lebar icon */
+  height: 60px; /* INSTRUKSI: Tinggi icon */
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  ); /* INSTRUKSI: Gradient background */
+  border-radius: 50%; /* EFEK: Bentuk bulat */
+  display: flex; /* PENJELASAN: Flex untuk center icon */
+  align-items: center; /* EFEK: Center vertical */
+  justify-content: center; /* EFEK: Center horizontal */
+  color: white; /* INSTRUKSI: Warna icon putih */
+  font-size: 1.5rem; /* INSTRUKSI: Ukuran icon */
+}
+
+/* Container informasi pendidikan */
+.education-info {
+  flex: 1; /* PENJELASAN: Mengisi ruang tersisa */
+}
+
+/* Judul jenjang pendidikan (S1, S2, dll) */
+.education-info h3 {
+  font-size: 1.5rem; /* INSTRUKSI: Ukuran font */
+  color: var(--text-color); /* INSTRUKSI: Warna text */
+  margin-bottom: 8px; /* INSTRUKSI: Jarak ke elemen bawah */
+  font-weight: 600; /* PENJELASAN: Bold */
+}
+
+/* Nama institusi */
+.education-info h4 {
+  font-size: 1.1rem; /* INSTRUKSI: Ukuran font */
+  color: var(--primary-color); /* INSTRUKSI: Warna primary */
+  margin-bottom: 15px; /* INSTRUKSI: Jarak ke elemen bawah */
+  font-weight: 500; /* PENJELASAN: Medium weight */
+}
+
+/* Styling untuk major, year, gpa */
+.education-info p {
+  font-size: 0.95rem; /* INSTRUKSI: Ukuran font */
+  color: #666; /* INSTRUKSI: Warna abu-abu */
+  margin-bottom: 8px; /* INSTRUKSI: Jarak antar paragraf */
+  display: flex; /* PENJELASAN: Flex untuk icon */
+  align-items: center; /* EFEK: Center vertical */
+  gap: 8px; /* INSTRUKSI: Jarak antara icon dan text */
+}
+
+/* Icon di dalam paragraf */
+.education-info p i {
+  color: var(--primary-color); /* INSTRUKSI: Warna icon */
+  font-size: 0.9rem; /* INSTRUKSI: Ukuran icon */
+}
+
+/* List prestasi/kegiatan */
+.education-achievements {
+  margin-top: 15px; /* INSTRUKSI: Jarak dari elemen atas */
+  padding-left: 20px; /* INSTRUKSI: Indentasi list */
+}
+
+/* Item dalam list prestasi */
+.education-achievements li {
+  font-size: 0.9rem; /* INSTRUKSI: Ukuran font */
+  color: #555; /* INSTRUKSI: Warna text */
+  margin-bottom: 6px; /* INSTRUKSI: Jarak antar item */
+  line-height: 1.5; /* EFEK: Line spacing */
+}
+
+/* Responsive untuk tablet dan desktop */
+@media (min-width: 768px) {
+  .education-content {
+    grid-template-columns: 1fr; /* PENJELASAN: Tetap 1 kolom untuk readability */
+  }
+}
+
+/* ===================================
+   10. EXPERIENCE SECTION
    =================================== 
    
    PENJELASAN:
@@ -1021,7 +1142,7 @@ section {
 }
 
 /* ===================================
-   10. CONTACT SECTION
+   11. CONTACT SECTION
    =================================== 
    
    PENJELASAN:
@@ -1139,7 +1260,7 @@ section {
 }
 
 /* ===================================
-   11. FOOTER
+   12. FOOTER
    =================================== 
    
    PENJELASAN:
@@ -1194,7 +1315,7 @@ section {
 }
 
 /* ===================================
-   12. SCROLL TO TOP BUTTON
+   13. SCROLL TO TOP BUTTON
    =================================== 
    
    PENJELASAN:
@@ -1241,7 +1362,7 @@ section {
 }
 
 /* ===================================
-   13. RESPONSIVE DESIGN
+   14. RESPONSIVE DESIGN
    =================================== 
    
    PENJELASAN:
@@ -1432,6 +1553,20 @@ section {
     flex-direction: column; /* EFEK: Stack copyright dan social vertikal */
     gap: 20px; /* INSTRUKSI: Jarak antar elements */
     text-align: center; /* EFEK: Center alignment */
+  }
+
+  /* Education card responsive */
+  .education-card {
+    flex-direction: column; /* EFEK: Stack icon dan info vertikal */
+    text-align: center; /* EFEK: Center text */
+  }
+
+  .education-icon {
+    margin: 0 auto; /* EFEK: Center icon */
+  }
+
+  .education-info p {
+    justify-content: center; /* EFEK: Center icon dan text */
   }
 }
 
